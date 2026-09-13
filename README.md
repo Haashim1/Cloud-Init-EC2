@@ -61,12 +61,15 @@ ec2-cloud-init/
 
 ### File Descriptions
 
-| [`main.tf`](main.tf) | Defines the AWS infrastructure |
-| [`variables.tf`](variables.tf) | Defines Terraform input variables |
+| File | Purpose |
+|---|---|
+| [`main.tf`](main.tf) | Defines the AWS provider, VPC, subnet, Internet Gateway, route table, Security Group and EC2 instance |
+| [`variables.tf`](variables.tf) | Defines Terraform input variables such as the AMI ID |
 | [`outputs.tf`](outputs.tf) | Outputs useful information such as the EC2 public IP |
-| [`cloud-init.yaml`](cloud-init.yaml) | Installs and starts NGINX |
-| [`.gitignore`](.gitignore) | Prevents local Terraform files from being committed |
+| [`cloud-init.yaml`](cloud-init.yaml) | Installs and starts NGINX when the EC2 instance boots |
+| [`.gitignore`](.gitignore) | Prevents Terraform state and local files from being committed |
 | [`.terraform.lock.hcl`](.terraform.lock.hcl) | Locks the Terraform provider version |
+| [`README.md`](README.md) | Project documentation |
 
 
 
